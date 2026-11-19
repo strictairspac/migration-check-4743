@@ -7,3 +7,19 @@
 .evidence p{overflow-wrap:anywhere}
 
 .workspace{background-image:none}.sidebar{background:oklch(27% .035 155)}.sidebar nav button.active{background:oklch(35% .04 155);border-color:oklch(79% .07 90)}.login-art{background:oklch(30% .045 155)}.login-art p{color:oklch(84% .035 115)}.postal-mark{border:3px double oklch(80% .04 100);color:oklch(85% .04 100);display:inline-block;padding:22px 35px;transform:rotate(-7deg);font-size:15px;line-height:2;letter-spacing:4px;margin-top:30px}.postal-mark b{font-weight:400;font-size:22px;display:block}.postal-mark span{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px}.page-title{border-bottom:1px dashed var(--line);margin-bottom:25px}.evidence pre{background:oklch(89% .018 110)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.status.cancelled{background:oklch(85% .02 90);color:var(--muted)}.evidence table{table-layout:fixed}.evidence td,.evidence th{overflow-wrap:anywhere}.evidence td:first-child{width:15%}.evidence td details pre{max-height:300px}.split code{overflow-wrap:anywhere}.evidence p{overflow-wrap:anywhere}#target-data{max-height:300px}.evidence button[data-restore]{margin-top:15px}@media(max-width:767px){.postal-mark{display:none}}
+
+/* 送检收件：组套分组、必检项颗粒度与版本对照 */
+.panel-group{border-top:1px solid var(--line);margin-top:34px;padding-top:20px}
+.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.panel-head h3{margin:8px 0 4px}
+.panel-head p{font-size:11px;margin:0}
+.panel-head .actions{margin-top:6px}
+.item-chip{display:inline-block;font-family:'Space Mono',monospace;font-size:9px;padding:3px 6px;margin:2px 3px 2px 0;background:oklch(88% .03 150);color:var(--ink)}
+.item-chip.bad{background:oklch(87% .06 35);color:var(--rust)}
+.item-chip.warn{background:oklch(89% .07 85)}
+.revise{margin:16px 0 10px;border:1px dashed var(--line);padding:10px 14px}
+.revise form button{margin-top:12px}
+.revise p{font-size:11px;margin:10px 0 0}
+[data-version]{font-variant-numeric:tabular-nums}
+#content select{margin-bottom:4px}
+@media(max-width:767px){.panel-head{display:block}}

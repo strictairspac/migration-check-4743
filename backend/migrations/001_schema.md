@@ -1,2 +1,4 @@
-# Schema v1
+# Schema v2
 SQLAlchemy metadata creates users/audits/batches/mappings/runs/target_rows. Unique natural names, foreign keys, and target unique(run_id,key_digest) enforce linkage. Successful workers atomically commit accepted target rows; cancelled/failed runs do not persist partial targets. Restore replaces a run's target set under a run row lock and checks the logical backup checksum before commit.
+
+送检收件链路新增 submission_batches/checklists/checklist_versions/commissions/result_files/result_items/result_rejections/intakes/intake_rows。清单按组套只增版本（checklist_versions 唯一 checklist_id+version，checklists.current_version 指向当前版）；commissions 唯一（送检批,委托号）；result_files 唯一（送检批,内容摘要）实现断线重试不重复收件；result_items 唯一（委托,检测项）保证同次送检同一项只留首条转换合格值；intakes 每委托唯一并把清单版本、必检项和整套摘要冻结在入库时，intake_rows 唯一（入库,检测项）。已入库记录不随清单更正变化，仍按原版本逐项核对。
